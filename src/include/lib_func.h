@@ -16,6 +16,17 @@ extern "C" {
 	// バブルソート(引数が不適切であればfalseを返す)
 	bool bubble_sort(item *begin, const item* end);
 
+	// +-------------+
+	// |             |
+	// |             |
+	// +-----+-------+ <- begin
+	// | key | value |
+	// +-----+-------+
+	// | key | value |
+	// +-----+-------+
+	// | key | value |
+	// +-----+-------+ <- end
+
 	// C++ でCのライブラリを使うときのおまじない
 #ifdef __cplusplus
 } // extern "C"
