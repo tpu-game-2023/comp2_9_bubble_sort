@@ -6,7 +6,7 @@
 int main()
 {
 	const int NUM = 100;
-	item items[NUM];
+	item items[NUM]{};
 
 	for (int i = 0; i < NUM; i++) {
 		items[i].key = rand();

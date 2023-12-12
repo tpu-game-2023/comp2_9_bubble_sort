@@ -9,13 +9,12 @@ namespace UnitTest
 	TEST_CLASS(基本確認)
 	{
 	public:
-		
+
 		TEST_METHOD(一要素はそのまま)
 		{
 			item items[1] = { {1, "Hello world!"} };
-			Assert::IsTrue(bubble_sort(items, items + sizeof(items)/sizeof(item)));
+			Assert::IsTrue(bubble_sort(items, items + sizeof(items) / sizeof(item)));
 			Assert::AreEqual("Hello world!", items[0].value);
-
 		}
 
 		TEST_METHOD(２要素でそのまま)
@@ -61,7 +60,7 @@ namespace UnitTest
 		TEST_METHOD(たくさんの要素を入れ替え)
 		{
 			const int NUM = 100000;
-			item *items = (item*)malloc(sizeof(item) * NUM);
+			item* items = (item*)malloc(sizeof(item) * NUM);
 			if (NULL == items) { Assert::Fail(); return; }
 
 			for (int i = 0; i < NUM; i++) {
