@@ -6,5 +6,17 @@
 // バブルソート(引数が不適切であればfalseを返す)
 bool bubble_sort(item* begin, const item* end)
 {
-	return false;
+	if(!begin || !end || begin > end)
+		return false;
+	for (item* i = begin; i < end - 1; i++) {
+		for (item* j = begin; j < end - (i - begin) - 1; j++) {
+
+			if (j->key > (j + 1)->key) {
+				item tmp = *j;
+				*j = *(j + 1);
+				*(j + 1) = tmp;
+			}
+		}
+	}
+	return true;
 }
