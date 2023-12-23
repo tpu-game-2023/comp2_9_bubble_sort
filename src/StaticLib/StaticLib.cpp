@@ -6,13 +6,13 @@
 // バブルソート(引数が不適切であればfalseを返す)
 bool bubble_sort(item* begin, const item* end)
 {
-	if (degin == NULL || end == NELL || degin >= end)
+	if (degin == NULL || end == NULL || degin >= end)
 	{
 		return false;
 	}
-    for (int i = begin; i < end - 1; ++i)
+    for (int i = begin; i < end - 1; i++)
     {
-        for (int j = begin; j < end - 1; ++j)
+        for (int j = begin; j < end - 1; j++)
         {
             if (j > (j + 1)) 
             {
