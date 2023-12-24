@@ -6,5 +6,10 @@
 // バブルソート(引数が不適切であればfalseを返す)
 bool bubble_sort(item* begin, const item* end)
 {
+	for (item* items[1]{}, const item* items[2]{};)
+		if (items[1] > items[2])
+			bubble_sort(items[1], items[2]);
+	return true;
+	    
 	return false;
 }
