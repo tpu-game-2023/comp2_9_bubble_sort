@@ -8,3 +8,12 @@ bool bubble_sort(item* begin, const item* end)
 {
 	return false;
 }
+
+bool bubbleSort()
+{
+	item items[1];
+	
+	return false;
+}
+
+
