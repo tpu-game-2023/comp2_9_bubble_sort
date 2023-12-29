@@ -10,15 +10,15 @@ bool bubble_sort(item* begin, const item* end)
 	{
 		return false;
 	}
-    for (int i = begin; i < end - 1; i++)
+    for (item* i = begin; i < end - 1; i++)
     {
-        for (int j = begin; j < end - 1; j++)
+        for (item* j = begin; j < end - 1; j++)
         {
-            if (j > (j + 1)) 
+            if (j->key > (j + 1)->key)
             {
-                int temp = j;
-                j = (j + 1);
-                (j + 1) = temp;
+                item temp = *j;
+                *j = (*j + 1);
+                (*j + 1) = temp;
             }
         }
     }
