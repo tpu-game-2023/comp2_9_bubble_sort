@@ -2,37 +2,22 @@
 #include "Windows.h"                    // Windows API の機能定義
 
 #include "../include/lib_func.h"
-static item* generate(int key, const char* value)
-{
-	item* p = (item*)malloc(sizeof(item));
 
-	if (p == NULL) return NULL;
-
-	p->key = key;
-	int n = (int)strlen(value);
-	memcpy(p->value, value, strlen(value) + 1);
-
-	
-
-	return p;
-}
 
 // バブルソート(引数が不適切であればfalseを返す)
 bool bubble_sort(item* begin, const item* end)
 {
-	if(begin==NULL||end==NULL)return false;
-	while (1)
+	if (begin == NULL || end < begin) return false;
+
+	for (item* p = begin; p != end - 1; p++)
 	{
-		item* p = generate(item_::key, value);
-		for (int i = 256; i > 0; i--)
+		for (item* q = begin + (end - begin - 1); q != p; q--) 
 		{
-			if (p->value[i] > p->value[i - 1])
-				break;
-			else
+			if (q->key < p->key) 
 			{
-				int x = p->value[i];
-				p->value[i] = p->value[i - 1];
-				p->value[i - 1] = x;
+				item tmp = *p;
+				*p = *q;
+				*q = tmp;
 			}
 		}
 	}
